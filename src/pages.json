@@ -1,0 +1,44 @@
+{
+  "easycom": {
+    "autoscan": true,   
+    "custom": {  
+        "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",  
+        "^uni-(.*)": "@/components/uni-$1/uni-$1.vue", 
+       "^auto-(.*)": "@/components/auto-$1.vue",
+       "^custom-(.*)": "@/components/custom-$1/index.vue"
+    }
+ },
+  "pages": [  
+    {
+      "path": "pages/login",
+      "style": { 
+        "navigationBarTitleText": "登录"
+      }
+    } 
+   ],
+ "preloadRule": {
+  "pagesA/borrow/applyBorrow": {
+      "network": "all",
+      "packages": ["__APP__"]
+  } 
+},
+  "globalStyle": { 
+    "navigationStyle":"custom", 
+    "navigationBarTitleText": "票务预约",
+    "navigationBarBackgroundColor": "#4791ff",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#1f1f1f",
+    "selectedColor": "#2b7bff",
+    "borderStyle": "#e9e9e9",
+    "backgroundColor": "#ffffff",
+    "list": [ ]
+   },
+  "condition": {
+    "current": 0,
+    "list": [
+      
+    ]
+  }
+}

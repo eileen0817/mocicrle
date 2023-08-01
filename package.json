@@ -1,0 +1,77 @@
+{
+  "name": "product-miniproject",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:h5": "uni-cli serve --platform h5 --watch",
+    "build:h5": "uni-cli build --platform h5",
+    "dev:weixin": "uni-cli serve --platform mp-weixin --watch",
+    "build:weixin": "uni-cli build --platform mp-weixin",
+    "dev:app-plus": "uni-cli serve --platform app-plus --watch",
+    "build:app-plus": "uni-cli build --platform app-plus"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app-plus": "^2.0.0-28920200907001",
+    "@dcloudio/uni-h5": "^2.0.0-28920200907001",
+    "@dcloudio/uni-helper-json": "^1.0.6",
+    "@dcloudio/uni-i18n": "^2.0.2-3071120230427001",
+    "@dcloudio/uni-mp-360": "^2.0.0-28920200907001",
+    "@dcloudio/uni-mp-alipay": "^2.0.0-28920200907001",
+    "@dcloudio/uni-mp-baidu": "^2.0.0-28920200907001",
+    "@dcloudio/uni-mp-qq": "^2.0.0-28920200907001",
+    "@dcloudio/uni-mp-toutiao": "^2.0.0-28920200907001",
+    "@dcloudio/uni-mp-vue": "^2.0.0-28620200814005",
+    "@dcloudio/uni-mp-weixin": "^2.0.0-28920200907001",
+    "@dcloudio/uni-quickapp-native": "^2.0.0-28620200814005",
+    "@dcloudio/uni-quickapp-webview": "^2.0.0-28920200907001",
+    "@dcloudio/uni-stat": "^2.0.0-28920200907001",
+    "@vue/shared": "^3.0.0-rc.10",
+    "core-js": "^3.6.5",
+    "flyio": "^0.6.2",
+    "fs": "0.0.1-security",
+    "node-sass": "^4.14.1",
+    "regenerator-runtime": "^0.12.1",
+    "sass-loader": "^9.0.3",
+    "uview-ui": "^1.8.6",
+    "vue": "^2.6.12",
+    "vuex": "^3.2.0"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^2.0.6",
+    "@dcloudio/uni-automator": "^2.0.0-28920200907001",
+    "@dcloudio/uni-cli-shared": "^2.0.0-28920200907001",
+    "@dcloudio/uni-migration": "^2.0.0-28920200907001",
+    "@dcloudio/uni-template-compiler": "^2.0.0-28920200907001",
+    "@dcloudio/vue-cli-plugin-hbuilderx": "^2.0.0-28920200907001",
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.0-28920200907001",
+    "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-28920200907001",
+    "@dcloudio/webpack-uni-mp-loader": "^2.0.0-28920200907001",
+    "@dcloudio/webpack-uni-pages-loader": "^2.0.0-28920200907001",
+    "@vue/cli-plugin-babel": "^4.5.4",
+    "@vue/cli-service": "^4.5.4",
+    "@xohu/vue-cli-plugin-uni": "^1.0.6",
+    "babel-plugin-import": "^1.11.0",
+    "cross-env": "^7.0.2",
+    "jest": "^25.4.0",
+    "mini-types": "*",
+    "miniprogram-api-typings": "^3.0.2",
+    "postcss-comment": "^2.0.0",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "browserslist": [
+    "Android >= 4",
+    "ios >= 8"
+  ],
+  "uni-app": {
+    "scripts": {
+      "weixin": {
+        "env": {
+          "UNI_PLATFORM": "mp-weixin"
+        },
+        "define": {
+          "CUSTOM-CONST": false
+        }
+      }
+    }
+  }
+}
