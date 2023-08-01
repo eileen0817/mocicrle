@@ -12,7 +12,8 @@
       <view class="header-right"></view>
     </view>
     <view class="login-panel">
-      <u-tabs height="60" font-size="32" :list="list" :is-scroll="true" :current="current" @change="changeTab" active-color="#000000"></u-tabs>
+      <u-tabs height="60" font-size="32" :list="list" :is-scroll="true" :current="current" @change="changeTab"
+        active-color="#000000"></u-tabs>
       <view v-show="current == 0">
         <u-form :model="form" ref="uForm">
           <u-form-item prop="userName" :border-bottom="false"><u-input v-model="form.userName"
@@ -25,8 +26,9 @@
         <u-form :model="form" ref="uForm" :error-type="errorType">
           <u-form-item prop="userName" :border-bottom="false"><u-input v-model="form.userName"
               placeholder="请输入手机号" /></u-form-item>
-          <u-form-item prop="mobileCode" :border-bottom="false"  class="relative-line"><u-input v-model="form.password"
-              placeholder="请输入验证码" /><auto-verification :check="check" postUrl="/wx/personal/getMobileCode" /></u-form-item>
+          <u-form-item prop="mobileCode" :border-bottom="false" class="relative-line"><u-input v-model="form.password"
+              placeholder="请输入验证码" /><auto-verification :check="check"
+              postUrl="/wx/personal/getMobileCode" /></u-form-item>
         </u-form>
       </view>
       <u-button :custom-style="customStyle">立即登录</u-button>
@@ -69,31 +71,31 @@ export default {
         borderColor: 'black'
       },
       rules: {
-          userName: [
-            {
-              required: true,
-              message: '手机号不能为空',
-              trigger: ['change', 'blur'],
-            },
-            {
-              validator: validator.mobile,
-              message: '手机号格式不正确',
-              trigger: ['change', 'blur'],
-            },
-          ],
-          password: [
-            {
-              required: true,
-              message: '登录密码不能为空',
-              trigger: ['change', 'blur'],
-            },
-          ],
-        },
+        userName: [
+          {
+            required: true,
+            message: '手机号不能为空',
+            trigger: ['change', 'blur'],
+          },
+          {
+            validator: validator.mobile,
+            message: '手机号格式不正确',
+            trigger: ['change', 'blur'],
+          },
+        ],
+        password: [
+          {
+            required: true,
+            message: '登录密码不能为空',
+            trigger: ['change', 'blur'],
+          },
+        ],
+      },
     };
   },
   onLoad() {
 
-   },
+  },
   // 必须要在onReady生命周期，因为onLoad生命周期组件可能尚未创建完毕
   onReady() {
     this.$refs.uForm.setRules(this.rules);
@@ -104,13 +106,13 @@ export default {
       this.current = inx;
     },
     check(callback) {
-      const self=this 
-      this.$refs.uForm.validate((valid) => {  
+      const self = this
+      this.$refs.uForm.validate((valid) => {
         callback(
           valid
-            ? { 
-                mobileNumber: self.form.userName,
-              }
+            ? {
+              mobileNumber: self.form.userName,
+            }
             : false
         );
       });
@@ -130,7 +132,8 @@ export default {
   padding: 110upx 30upx;
   min-height: 100vh;
   background: url('~@/assets/img/login/bg.jpg') center center no-repeat;
-    background-size: 100%;
+  background-size: 100%;
+
   .header-panel {
     display: flex;
     justify-content: space-between;
@@ -165,15 +168,21 @@ export default {
 
     /deep/ .u-form-item {
       padding: 28upx 0 28upx 15px;
+      background-color: #f4f5f7;
 
       &>.u-form-item__body {
-        background-color: #f4f5f7;
+
         border-radius: 16upx;
         padding: 2upx 30upx;
       }
     }
-    .relative-line{
+
+    .relative-line {
       position: relative;
+
+      /deep/ .u-form-item__body {
+        padding-right: 200upx;
+      }
     }
   }
 
@@ -188,12 +197,12 @@ export default {
     text {
       color: #ff6600;
     }
-    .icon-my-weixin{
+
+    .icon-my-weixin {
       color: #00c800;
       font-size: 46upx;
       vertical-align: middle;
       margin-right: 12upx;
     }
   }
-}
-</style>
+}</style>
