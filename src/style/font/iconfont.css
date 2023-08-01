@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 4072307 */
-  src: url('iconfont.woff2?t=1685584612982') format('woff2'),
-       url('iconfont.woff?t=1685584612982') format('woff'),
-       url('iconfont.ttf?t=1685584612982') format('truetype');
+  font-family: "iconfont"; /* Project id 4192425 */
+  src: url('iconfont.woff2?t=1690876679653') format('woff2'),
+       url('iconfont.woff?t=1690876679653') format('woff'),
+       url('iconfont.ttf?t=1690876679653') format('truetype');
 }
 
 [class^="icon-my"],
@@ -14,43 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-my-delete:before {
-  content: "\e601";
-}
-
-.icon-my-add:before {
-  content: "\e602";
-}
-
-.icon-my-success:before {
-  content: "\e600";
-}
-
-.icon-my-checkbox:before {
-  content: "\e994";
-}
-
-.icon-my-arrow-left:before {
-  content: "\e646";
-}
-
-.icon-my-arrow-down:before {
-  content: "\e666";
-}
-
-.icon-my-tel:before {
-  content: "\e94f";
-}
-
-.icon-my-position:before {
-  content: "\e61f";
-}
-
-.icon-my-notice:before {
-  content: "\e604";
-}
-
-.icon-my-arrow-right:before {
-  content: "\e665";
+.icon-my-weixin:before {
+  content: "\e668";
 }
 

@@ -12,7 +12,13 @@
     {
       "path": "pages/login",
       "style": { 
-        "navigationBarTitleText": "登录"
+        "navigationBarTitleText": "登录页面"
+      }
+    },
+    {
+      "path": "pages/register",
+      "style": { 
+        "navigationBarTitleText": "用户注册"
       }
     } 
    ],
@@ -24,7 +30,7 @@
 },
   "globalStyle": { 
     "navigationStyle":"custom", 
-    "navigationBarTitleText": "票务预约",
+    "navigationBarTitleText": "陌圈",
     "navigationBarBackgroundColor": "#4791ff",
     "backgroundColor": "#F8F8F8"
   },
