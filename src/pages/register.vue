@@ -29,12 +29,12 @@
           <view>身份选择<text class="tip">(多选项)</text></view>
           <view class="identity-choose">
             <view @click="chooseIdentity(1)">
-              <view :class="['identity-icon', 'icon-worker', { 'active': form.identity == 1 }]"></view>
+              <view :class="['identity-icon', 'icon-worker', { 'active': form.worker }]"></view>
               <text>我是员工</text>
             </view>
             <view @click="chooseIdentity(2)">
-              <view :class="['identity-icon', 'icon-shopowner', { 'active': form.identity == 2 }]"></view>
-              <text>我是员工</text>
+              <view :class="['identity-icon', 'icon-shopowner', { 'active': form.shopowner }]"></view>
+              <text>我是店长</text>
             </view>
           </view>
         </view>
@@ -62,7 +62,8 @@ export default {
         password: '', // 密码
         mobileCode: '', // 验证码（仅手机快捷登录需要）
         store: '',
-        identity: ''
+        worker:false,
+        shopowner: false,
       },
       // 按钮自定义样式
       customStyle: {
@@ -132,7 +133,11 @@ export default {
       this.store = e[0].value
     },
     chooseIdentity(v) {
-      this.form.identity = v
+      if(v==1){
+        this.form.worker=!this.form.worker
+      }else{
+        this.form.shopowner=!this.form.shopowner
+      } 
     }
   },
 };
